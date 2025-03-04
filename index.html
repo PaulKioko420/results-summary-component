@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url('https://fonts.google.com/specimen/Hanken+Grotesk');
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      
+      text-align: center;
+      font-family: "Hanken Grotesk", sans-serif;
+      
+    } 
+
+    .p1 {
+      color: hsl(224, 30%, 27%);
+      margin-bottom: 14px;
+      font-size: 18px;
+    ;
+    }
+   
+    .over100{
+
+      display: flex;
+      flex-direction: column;
+      background-color: linear-gradient(30deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%)); 
+      align-items: center;
+      border-radius: 70px; 
+      width: 130px;
+      height: 130px;
+      margin-left: 55px;
+      margin-top: 30px;
+      border-style: solid;
+      border-color: hsl(241, 81%, 54%);
+      border-width: 1px;
+    }
+    .sevensix {
+      font-size: 45px;
+      font-weight: 700;
+      font-family: "Hanken Grotesk", sans-serif;
+      margin-top: 40px;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .of100 {
+      font-weight: 500;
+      color: hsl(224, 30%, 27%);
+      font-size: 10px;
+    margin-top: 3px;
+    }
+
+    .great {
+      margin-top: 25px;
+      font-size: 17px;
+      color: hsl(0, 0%, 100%);
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+   
+    .result {
+      background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+      padding: 35px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+    
+    .resultsummary {
+    color: hsl(224, 30%, 27%);
+    font-size: 18px;
+    }
+
+    .summary {
+      background: hsl(0, 0%, 100%);
+      padding: 20px;
+      text-align: center;
+      border-radius: 20px;
+      
+    }
+
+    .summaryp {
+      font-weight: 700;
+      margin-bottom: 13px;
+      text-align: left;
+    }
+
+    .summarydisplay  {
+       
+      display: flex;
+      justify-content: space-between;
+      
+       align-items: center;
+       gap: 70px;
+       background: hsl(0, 78%, 85%);
+       text-align: center;
+       padding: 15px;
+       border-radius: 30px;
+              
+    }
+
+    .summarydisplay1 {
+      display: flex;
+      justify-content: space-between;
+      
+       align-items: center;
+       gap: 70px;
+       background-color: hsl(38, 77%, 90%);
+       margin-top: 7px;
+       padding: 15px;
+       border-radius: 30px;
+    }
+
+    .summarydisplay2 {
+      display: flex;
+      justify-content: space-between;
+      
+       align-items: center;
+       gap: 70px;
+       background-color: hsl(166, 100%, 89%);
+       margin-top: 7px;
+       padding: 15px;
+       border-radius: 30px;
+    }
+
+    .summarydisplay3 {
+      display: flex;
+      justify-content: space-between;
+      
+       align-items: center;
+       gap: 70px;
+       background-color: hsl(234, 85%, 76%);
+       margin-top: 7px;
+       padding: 15px;
+       border-radius: 30px;
+      }
+
+       .summarydisplay4 {
+      display: flex;
+      justify-content: space-between;
+      
+       align-items: center;
+       gap: 70px;
+    }  
+
+    img {margin-right: 6px;
+         margin-left: 6px;
+    }
+
+    .reaction {
+      color: hsl(0, 100%, 67%);
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+ 
+    }
+
+    .memory {
+      color: hsl(39, 100%, 56%);
+      font-size: 14px;
+      font-weight: 500;
+    
+    }
+
+    .verbal {
+      color: hsl(166, 100%, 37%);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .visual {
+      color: hsl(234, 85%, 45%);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    span {
+      font-weight: 600;
+      color:  hsl(224, 30%, 27%);
+      font-size: 14px;
+    }
+
+    .p2 {
+      color: hsl(224, 30%, 27%);
+      
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 7px;
+    }
+
+    button {
+     width: 100%;
+     margin-top: 14px; 
+     padding: 13px;
+     border-radius: 30px;
+     background-color: hsl(224, 30%, 27%);
+     color: hsl(0, 0%, 100%);
+     font-weight: 700;
+     border: none;
+     cursor: pointer;
+    }
+
+
+    button:hover {background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%)); }
+
+    .container {
+      background-color: hsl(221, 100%, 96%);
+      
+    }
+
+    @media (min-width: 320px) and (max-width: 375px){
+      .container{
+        display: flex;
+      flex-direction: column;
+
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+   <div class="container">
+    <div class="result">
+      <p class="p1">Your Results</p>
+      <div class="over100">
+       <p class="sevensix">76</p>
+       <p class="of100">of 100</p>
+       
+      </div>
+      <p class="great">Great</p>
+      <p class="resultsummary">You scored higher than 65% of<br> the people who have taken<br> these tests.</p>
+        
+    </div>
+
+    <div class="summary" >
+      <p class="summaryp">
+        Summary
+      </p>
+      <div class="summarydisplay">
+        <p class="reaction"><img src="assets/images/icon-reaction.svg"> Reaction</p>
+        <p class="p2"><span>80</span>/100</p>
+      </div>
+      <div class="summarydisplay1">
+        <p class="memory"><img src="assets/images/icon-memory.svg"> Memory</p>
+        <p class="p2"><span>92</span>/100</p>
+      </div>
+      <div class="summarydisplay2">
+        <p class="verbal"><img src="assets/images/icon-verbal.svg"> Verbal</p>
+        <p class="p2"><span>61</span>/100</p>
+      </div>
+      <div class="summarydisplay3">
+        <p class="visual"><img src="assets/images/icon-visual.svg"> Visual</p>
+        <p class="p2"><span>72</span>/100</p>
+      </div>
+     
+      <button>Continue</button>
+
+    </div>
+
+   </div>
+  </main>
+
+  
+  <footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  </footer>
+</body>
+</html>
